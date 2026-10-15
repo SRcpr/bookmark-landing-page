@@ -1,7 +1,49 @@
+// ### Primary
+
+$blue-600: hsl(231, 69%, 60%);
+$red-400: hsl(0, 94%, 66%);
+
+// ### Neutral
+
+$grey-50: hsl(0, 0%, 97%);
+$blue-950: hsl(229, 31%, 21%);
+
+
 body{
     font-size: 18px;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 400; //400 500
+}
+.nav-dark{
+    background-color: $blue-950;
+    color: $grey-50;
+}
+.bg-login{
+    background-color: $red-400;
+}
+.btn-primary{
+    color: white;
+    background-color: $blue-600;
+}
+.btn-secondary{
+    background-color: $grey-50;
+    color: $blue-950;
+}
+.customtext-gray{
+    color: $grey-50;
+}
+.is-open #nav-menu{
+    display: none;
+}
+.is-open #close-menu{
+    display: block;
+}
+.is-open #hamburger-menu{
+    display: none;
+}
+.is-open #menu{
+    display: block;
+    
 }
