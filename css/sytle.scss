@@ -8,7 +8,9 @@ $red-400: hsl(0, 94%, 66%);
 $grey-50: hsl(0, 0%, 97%);
 $blue-950: hsl(229, 31%, 21%);
 
-
+// h1=3xl h2=2xl h3=xl p=text-lg 
+// gap=4 section gap=12//10
+// button px-3 py-2
 body{
     font-size: 18px;
     font-family: "Rubik", sans-serif;
@@ -23,6 +25,13 @@ body{
 .bg-login{
     background-color: $red-400;
 }
+// #hero,#feature,#extension{
+//     border: 2px solid blue;
+// }
+p,.tab-link{
+    color:$blue-950;
+    opacity: 0.5;
+}
 .btn-primary{
     color: white;
     background-color: $blue-600;
@@ -33,6 +42,22 @@ body{
 }
 .customtext-gray{
     color: $grey-50;
+}
+.tab-item{
+    position: relative;
+}
+.tab-link:hover::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $red-400;
+    height: 4px;
+}
+.tab-link.active{
+    color: $blue-950;
 }
 .is-open #nav-menu{
     display: none;
@@ -46,4 +71,10 @@ body{
 .is-open #menu{
     display: block;
     
+}
+@media(min-width:768px){
+    .tab-link:hover::after{
+        width:100%;
+        
+    }   
 }
