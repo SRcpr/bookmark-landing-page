@@ -24,95 +24,127 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
-  <body>
-    <header class="border border-red-500 py-6">
-      <nav id="nav-menu" class="px-6 flex justify-between items-center">
-        <a href="#" class=""
-          ><img
-            class=""
-            src="./images/logo-bookmark.svg"
-            alt="brand logo in header menu"
-        /></a>
-        <button type="button" class="block md:hidden" id="hamburger-menu">
-          <img src="./images/icon-hamburger.svg" alt="hamburger menu icon" />
-        </button>
-        <button type="button" class="hidden" id="close-menu">
-          <img class="" src="./images/icon-close.svg" alt="close menu icon" />
-        </button>
-        <ul
-          class="hidden md:flex gap-8 items-center uppercase text-sm"
-          id="menu"
+  <body class="flex flex-col gap-20">
+    <header class="">
+      <nav
+        class="flex justify-between md:justify-start items-center py-4 md:p-0 border relative"
+      >
+        <a href="#">
+          <img src="./images/logo-bookmark.svg" alt="brand logo" />
+        </a>
+        <button
+          type="button"
+          aria-label="hamburger menu"
+          id="hamburger-menu"
+          class="md:hidden"
         >
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
-          <li>
-            <button
-              id=""
-              type="button"
-              class="uppercase text-sm bg-login customtext-gray px-4 py-1 rounded-md"
-            >
-              Login
+          <img src="./images/icon-hamburger.svg" alt="" aria-hidden="true" />
+        </button>
+        <div
+          class="hidden md:flex md:justify-end flex-1 fixed overflow-y-auto h-full inset-x-0 inset-y-0 z-50 md:static"
+          id="menu-wrapper"
+        >
+          <section class="flex justify-between py-4 md:hidden">
+            <a href="#">
+              <img src="./images/logo-bookmark.svg" alt="brand logo" />
+            </a>
+            <button type="button" aria-label="close menu" id="close-menu">
+              <img src="./images/icon-close.svg" alt="" aria-hidden="true" />
             </button>
-          </li>
-        </ul>
+          </section>
+          <ul
+            class="flex flex-col md:text-sm md:flex-row md:items-center md:gap-10 text-center uppercase"
+          >
+            <li class="border-t py-4 md:border-none">
+              <a href="#">Features</a>
+            </li>
+            <li class="border-t py-4 md:border-none">
+              <a href="#">Pricing</a>
+            </li>
+            <li class="border-t border-b py-4 md:border-none">
+              <a href="#">Contact</a>
+            </li>
+            <li class="py-4 md:border-none">
+              <button
+                id="login"
+                type="button"
+                class="uppercase font-medium md:py-1 md:px-4 w-full border rounded-md"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+          <section
+            id="social-links"
+            class="flex gap-10 justify-center items-center py-4 md:hidden"
+          >
+            <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
+            <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
+          </section>
+        </div>
       </nav>
     </header>
-    <main class="flex flex-col gap-24">
-      <section class="flex flex-col-reverse gap-12 md:flex-row" id="hero">
-        <div class="flex flex-col gap-4 md:w-1/2 md:justify-center">
-          <h1 class="text-3xl font-medium text-center md:text-start">
+    <main class="flex flex-col gap-20">
+      <section
+        class="flex flex-col-reverse text-center md:gap-10 md:flex-row md:text-start md:justify-between"
+        id="hero"
+      >
+        <div class="flex flex-col gap-8 justify-center w-full md:w-[45%]">
+          <h1 class="text-3xl font-medium lg:text-5xl">
             A Simple Bookmark Manager
           </h1>
-          <p class="text-center text-lg md:text-start">
+          <p class="text-lg">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
           </p>
-          <div class="flex gap-4 justify-center md:justify-start">
+          <div class="flex justify-center gap-4 md:justify-start">
             <button
               type="button"
-              class="btn-primary px-3 py-2 text-sm font-medium rounded-sm"
+              class="btn-primary py-2 px-4 font-medium rounded-md"
             >
               Get it on Chrome
             </button>
             <button
               type="button"
-              class="btn-secondary px-3 py-2 text-sm font-medium rounded-sm"
+              class="btn-secondary py-2 px-4 font-medium rounded-md"
             >
               Get it on Firefox
             </button>
           </div>
         </div>
-        <div class="md:w-1/2">
-          <img
-            class="w-full h-full object-cover block"
-            src="./images/illustration-hero.svg"
-            alt=""
-          />
+        <div class="w-full md:w-[45%]" id="image-setting">
+          <img class="" src="./images/illustration-hero.svg" alt="" />
         </div>
       </section>
-      <section class="flex flex-col gap-10 px-6" id="feature">
-        <h2 class="text-2xl font-medium text-center">Features</h2>
-        <p class="text-lg max-w-[564px] mx-auto">
+      <section
+        class="text-center md:text-start flex flex-col gap-10"
+        id="feature"
+      >
+        <h2 class="text-2xl font-medium md:mx-auto">Features</h2>
+        <p class="text-lg md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto">
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
         </p>
         <ul
           id="tab-list"
-          class="md:border-b text-center flex flex-col w-full md:flex-row md:gap-10 justify-center md:justify-between max-w-[70vw] mx-auto"
+          class="text-center flex flex-col md:flex-row md:justify-between md:gap-10 md:w-[70%] md:mx-auto"
         >
-          <li class="border-t md:border-0 border-red-800 py-3 tab-item">
-            <a class="tab-link active" href="#simple-bookmarking"
+          <li
+            class="border-t py-4 md:border-t-0 md:border-b md:w-full relative"
+          >
+            <a class="tab-link" href="#simple-bookmarking"
               >Simple Bookmarking</a
             >
           </li>
-          <li class="border-t md:border-0 border-red-800 py-3 tab-item">
+          <li
+            class="border-t py-4 md:border-t-0 md:border-b md:w-full relative"
+          >
             <a class="tab-link" href="#speedy-searching">Speedy Searching</a>
           </li>
           <li
-            class="border-t border-b md:border-0 border-red-800 py-3 tab-item"
+            class="border-t border-b py-4 md:border-t-0 md:border-b md:w-full relative"
           >
             <a class="tab-link" href="#easy-sharing">Easy Sharing</a>
           </li>
@@ -120,48 +152,41 @@
         <!-- tab simple-bookmarking  -->
         <div
           id="simple-bookmarking"
-          class="go-to-page flex flex-col md:flex-row gap-10"
+          class="flex flex-col gap-10 go-to-page md:flex-row"
         >
-          <div class="w-ful md:w-1/2">
+          <div class="w-full">
             <img
               src="./images/illustration-features-tab-1.svg"
               alt="image for tab 1"
             />
           </div>
-          <div class="md:w-1/2 flex flex-col gap-10 justify-center">
-            <h2 class="text-2xl text-center md:text-start font-medium">
-              Bookmark in one click
-            </h2>
-            <p class="text-lg text-center md:text-start">
+          <div class="flex flex-col gap-10 w-full md:justify-center">
+            <h2 class="text-2xl font-medium">Bookmark in one click</h2>
+            <p class="text-lg md:w-3/4">
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
               favourite sites.
             </p>
-            <button class="btn-primary py-2 rounded-sm w-40" type="button">
-              More Info
-            </button>
           </div>
         </div>
         <!-- tab speedy searching -->
         <div
           id="speedy-searching"
-          class="go-to-page hidden flex-col md:flex-row gap-10"
+          class="hidden flex-col gap-10 go-to-page md:flex-row"
         >
-          <div class="w-ful md:w-1/2">
+          <div class="w-full">
             <img
               src="./images/illustration-features-tab-2.svg"
               alt="image for tab  2"
             />
           </div>
-          <div class="md:w-1/2 flex flex-col gap-10 justify-center">
-            <h2 class="text-2xl text-center md:text-start font-medium">
-              Intelligent search
-            </h2>
-            <p class="text-lg text-center md:text-start">
+          <div class="flex flex-col gap-10 w-full md:justify-center">
+            <h2 class="text-2xl font-medium">Intelligent search</h2>
+            <p class="text-lg md:w-3/4">
               Our powerful search feature will help you find saved sites in no
               time at all. No need to trawl through all of your bookmarks.
             </p>
-            <button type="button" class="btn-primary py-2 rounded-sm w-40">
+            <button class="btn-primary py-2 px-4 rounded-md" type="button">
               More Info
             </button>
           </div>
@@ -169,53 +194,56 @@
         <!-- tab easy sharing -->
         <div
           id="easy-sharing"
-          class="go-to-page hidden flex-col md:flex-row gap-10"
+          class="hidden flex-col gap-10 go-to-page md:flex-row"
         >
-          <div class="w-ful md:w-1/2">
+          <div class="w-full">
             <img
-              class="w-full"
+              class=""
               src="./images/illustration-features-tab-3.svg"
               alt="image for tab 3"
             />
           </div>
-          <div class="md:w-1/2 flex flex-col gap-10 justify-center">
-            <h2 class="text-2xl text-center md:text-start font-medium">
-              Share your bookmarks
-            </h2>
-            <p class="text-lg text-center md:text-start">
+          <div class="flex flex-col gap-10 w-full md:justify-center">
+            <h2 class="text-2xl font-medium">Share your bookmarks</h2>
+            <p class="text-lg md:w-3/4">
               Easily share your bookmarks and collections with others. Create a
               shareable link that you can send at the click of a button.
             </p>
-            <button type="button" class="btn-primary py-2 rounded-sm w-40">
+            <button class="btn-primary py-2 px-4 rounded-md" type="button">
               More Info
             </button>
           </div>
         </div>
       </section>
-      <section class="flex flex-col gap-10 py-6 px-6" id="extension">
-        <h2 class="text-center">Download the extension</h2>
-        <p class="text-center text-lg max-w-[564px] mx-auto">
+      <section
+        class="text-center md:text-start flex flex-col gap-10"
+        id="extension"
+      >
+        <h2 class="text-2xl text-center font-medium">Download the extension</h2>
+        <p class="text-lg md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto">
           We’ve got more browsers in the pipeline. Please do let us know if
           you’ve got a favourite you’d like us to prioritize.
         </p>
-        <div class="flex flex-col md:flex-row md:justify-between gap-8">
+        <div class="flex flex-col gap-10 md:flex-row">
           <!-- extentsion google -->
           <div
             id="extension-google"
-            class="md:w-[32%] py-10 rounded-3xl shadow-xl"
+            class="w-full flex flex-col gap-10 rounded-md shadow-xl p-4"
           >
-            <div class="flex justify-center py-6">
+            <div class="flex justify-center">
               <img
                 class=""
                 src="./images/logo-chrome.svg"
                 alt="chrome browser"
               />
             </div>
-            <div class="flex flex-col gap-4 items-center">
+            <div class="flex flex-col items-center gap-4">
               <h3 class="text-xl font-medium">Add to Chrome</h3>
-              <p class="text-base">Minimum version 62</p>
-              <div><img src="./images/bg-dots.svg" alt="divider line" /></div>
-              <button class="btn-primary py-2 px-4 rounded-sm">
+              <p class="text-sm">Minimum version 62</p>
+              <div class="">
+                <img class="" src="./images/bg-dots.svg" alt="divider line" />
+              </div>
+              <button class="btn-primary py-2 px-4 rounded-md btn-style">
                 Add & Install Extension
               </button>
             </div>
@@ -223,16 +251,16 @@
           <!-- extention firefox -->
           <div
             id="extension-firefox"
-            class="md:w-[32%] py-10 rounded-3xl shadow-xl"
+            class="w-full flex flex-col gap-10 rounded-md shadow-xl p-4"
           >
-            <div class="flex justify-center py-6">
+            <div class="flex justify-center">
               <img src="./images/logo-firefox.svg" alt="firebox browser" />
             </div>
-            <div class="flex flex-col gap-4 items-center">
+            <div class="flex flex-col items-center gap-4">
               <h3 class="text-xl font-medium">Add to Firefox</h3>
-              <p class="text-base">Minimum version 55</p>
+              <p class="text-sm">Minimum version 55</p>
               <div><img src="./images/bg-dots.svg" alt="divider line" /></div>
-              <button class="btn-primary py-2 px-4 rounded-sm">
+              <button class="btn-primary py-2 px-4 rounded-md btn-style">
                 Add & Install Extension
               </button>
             </div>
@@ -240,40 +268,68 @@
           <!-- extention oprea -->
           <div
             id="extension-opera"
-            class="md:w-[32%] py-10 rounded-3xl shadow-xl"
+            class="w-full flex flex-col gap-10 rounded-md shadow-xl p-4"
           >
-            <div class="flex justify-center py-6">
+            <div class="flex justify-center">
               <img src="./images/logo-opera.svg" alt="opera brower" />
             </div>
-            <div class="flex flex-col gap-4 items-center">
+            <div class="flex flex-col items-center gap-4">
               <h3 class="text-xl font-medium">Add to Oprea</h3>
-              <p class="text-base">Minimum version 46</p>
+              <p class="text-sm">Minimum version 46</p>
               <div><img src="./images/bg-dots.svg" alt="divider line" /></div>
-              <button class="btn-primary py-2 px-4 rounded-sm">
+              <button class="btn-primary py-2 px-4 rounded-md btn-style">
                 Add & Install Extension
               </button>
             </div>
           </div>
         </div>
       </section>
-      <section class="border border-red-500">
-        <h2>Frequently Asked Questions</h2>
-        <p>
+      <section class="text-center md:text-start flex flex-col gap-10" id="faq">
+        <h2 class="text-2xl font-medium md:text-center">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-lg md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto">
           Here are some of our FAQs. If you have any other questions you’d like
           answered please feel free to email us.
         </p>
-        <aside>
-          <dl>
-            <dt>What is Bookmark?</dt>
-            <dd>
+        <dl
+          class="flex flex-col gap-4 md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto"
+        >
+          <div class="text-start border-b py-4 md:border-b-0 md:border-t">
+            <dt class="">
+              <button
+                aria-controls="faq-answer-1"
+                aria-expanded="false"
+                id="faq-question-1"
+                class="w-full flex justify-between items-center collapsed"
+              >
+                What is Bookmark?<img
+                  class="h-full"
+                  id=""
+                  src="./images/icon-arrow.svg"
+                  alt="collaps menu"
+                />
+              </button>
+            </dt>
+            <dd class="hidden mt-4" id="faq-answer-1">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
               quis quam ornare mattis.
             </dd>
-          </dl>
-          <dl>
-            <dt>How can I request a new browser?</dt>
-            <dd>
+          </div>
+          <div class="text-start border-b py-4 md:border-b-0 md:border-t">
+            <dt>
+              <button
+                aria-controls="faq-answer-2"
+                id="faq-question-2"
+                aria-expanded="false"
+                class="w-full flex justify-between items-center collapsed"
+              >
+                How can I request a new browser?
+                <img class="" src="./images/icon-arrow.svg" alt="" />
+              </button>
+            </dt>
+            <dd class="hidden mt-4" id="faq-answer-2">
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue
               massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
               eros aliquet convallis ultricies. Mauris augue massa, ultricies
@@ -281,64 +337,112 @@
               convallis ultricies. Mauris augue massa, ultricies non ligula.
               Suspendisse imperdiet.
             </dd>
-          </dl>
-          <dl>
-            <dt>Is there a mobile app?</dt>
-            <dd>
+          </div>
+          <div class="text-start border-b py-4 md:border-b-0 md:border-t">
+            <dt>
+              <button
+                aria-controls="faq-answer-3"
+                aria-expanded="false"
+                id="faq-question-3"
+                class="w-full flex justify-between items-center collapsed"
+              >
+                Is there a mobile app?
+                <img src="./images/icon-arrow.svg" alt="" />
+              </button>
+            </dt>
+            <dd class="hidden mt-4" id="faq-answer-3">
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus
               vestibulum dolor, ut condimentum urna vulputate eget. Cras in
               ligula quis est pharetra mattis sit amet pharetra purus. Sed
               sollicitudin ex et ultricies bibendum.
             </dd>
-          </dl>
-          <dl>
-            <dt>What about other Chromium browsers?</dt>
-            <dd>
+          </div>
+          <div class="text-start border-b py-4 md:border-t">
+            <dt>
+              <button
+                aria-controls="faq-answer-4"
+                aria-expanded="false"
+                id="faq-question-4"
+                class="w-full flex justify-between items-center collapsed"
+              >
+                What about other Chromium browsers?
+                <img src="./images/icon-arrow.svg" alt="" class="" />
+              </button>
+            </dt>
+            <dd class="hidden mt-4" id="faq-answer-4">
               Integer condimentum ipsum id imperdiet finibus. Vivamus in
               placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
               pellentesque non ut velit. More Info 35,000+ already joined Stay
               up-to-date with what we’re doing Contact Us Features Pricing
               Contact
             </dd>
-          </dl>
-        </aside>
+          </div>
+        </dl>
+        <button
+          type="button"
+          class="btn-primary w-52 mx-auto py-2 px-4 rounded-md hover:cursor-pointer"
+        >
+          More Info
+        </button>
       </section>
     </main>
-    <footer class="border border-green-500">
-      <section>
-        <p>35,000 + Aleady joined</p>
-        <h2>Stay up-to-date with what we're doing</h2>
-        <div>
-          <label for="email" aria-label="email">
-            <input
-              type="email"
-              name=""
-              id="email"
-              placeholder="Enter your email address"
-            />
-          </label>
-          <button type="button">contant us</button>
-        </div>
+    <footer class="text-center text-white" id="footer">
+      <section class="py-10 flex flex-col gap-8" id="footer-page">
+        <p class="text-lg uppercase">35,000 + Aleady joined</p>
+        <h2
+          class="text-2xl font-medium md:text-3xl md:mx-auto md:w-[40%] lg:w-[35%] xl:w-[32%]"
+        >
+          Stay up-to-date with what we're doing
+        </h2>
+
+        <form
+          class="flex flex-col gap-4 md:flex-row md:mx-auto md:w-[40%] lg:w-[35%] xl:w-[32%]"
+        >
+          <div class="bg-login flex-1 rounded-md" id="inputSetError">
+            <div class="relative">
+              <label class="sr-only" for="email">Enter your email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="bg-white px-4 py-2 w-full text-red-500 rounded-md"
+                placeholder="Enter your email address"
+              />
+              <div
+                class="absolute inset-y-0 right-2 flex items-center invisible"
+                id="errorMark"
+              >
+                <img src="./images/icon-error.svg" alt="" />
+              </div>
+            </div>
+            <p class="hidden" id="errorMsg">Whoops, make sure it's an email</p>
+          </div>
+          <div class="">
+            <button class="w-full px-4 py-2 bg-login rounded-md" type="submit">
+              contant us
+            </button>
+          </div>
+        </form>
       </section>
-      <section>
-        <nav>
-          <a href="#"
-            ><img src="./images/logo-bookmark.svg" alt="brand logo "
+      <section id="footer-nav" class="py-10 md:py-4">
+        <nav class="flex flex-col items-center gap-8 md:flex-row">
+          <a href="#" class="md:w-[15%]"
+            ><img class="" src="./images/logo-bookmark.svg" alt="brand logo "
           /></a>
 
-          <ul>
+          <ul class="flex flex-col md:flex-row gap-4 md:w-[70%]">
             <li><a href="#">Features</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Contact</a></li>
             <li><button type="button">Login</button></li>
           </ul>
-          <ul>
-            <li>
+          <ul class="flex md:flex-row gap-8 md:w-[15%] md:justify-end">
+            <li class="">
               <a href="#"
                 ><img src="./images/icon-facebook.svg" alt="facebook"
               /></a>
             </li>
-            <li>
+            <li class="">
               <a href="#"
                 ><img src="./images/icon-twitter.svg" alt="twitter"
               /></a>

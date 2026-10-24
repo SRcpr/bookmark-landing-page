@@ -6,28 +6,69 @@ body {
   font-weight: 400;
 }
 
-.nav-dark {
+.drawer {
   background-color: hsl(229, 31%, 21%);
-  color: hsl(0, 0%, 97%);
 }
-
-.bg-login {
-  background-color: hsl(0, 94%, 66%);
-}
-
-p, .tab-link {
-  color: hsl(229, 31%, 21%);
-  opacity: 0.5;
+.drawer a, .drawer button {
+  color: white;
 }
 
 .btn-primary {
   color: white;
   background-color: hsl(231, 69%, 60%);
+  outline: 1px solid hsl(231, 69%, 60%);
 }
 
 .btn-secondary {
   background-color: hsl(0, 0%, 97%);
   color: hsl(229, 31%, 21%);
+  outline: 1px solid hsl(229, 31%, 21%);
+}
+
+#hero button {
+  cursor: pointer;
+}
+#hero button:first-child:hover {
+  color: hsl(231, 69%, 60%);
+  background-color: white;
+}
+#hero button:last-child:hover {
+  color: hsl(0, 0%, 97%);
+  background-color: white;
+}
+
+.collapsed[aria-expanded=true] img {
+  transform: rotate(180deg);
+}
+.collapsed:hover {
+  cursor: pointer;
+}
+
+.nav-dark {
+  background-color: hsl(229, 31%, 21%);
+}
+
+footer #footer-page {
+  background-color: hsl(231, 69%, 60%);
+}
+footer #footer-page #email::placeholder {
+  color: hsl(231, 69%, 60%);
+  opacity: 0.5;
+}
+footer #footer-page .bg-login {
+  background-color: hsl(0, 94%, 66%);
+}
+footer #footer-nav {
+  background-color: hsl(229, 31%, 21%);
+}
+
+.white {
+  color: hsl(0, 0%, 97%);
+}
+
+.custom-text, .tab-link {
+  color: hsl(229, 31%, 21%);
+  opacity: 0.5;
 }
 
 .customtext-gray {
@@ -42,7 +83,7 @@ p, .tab-link {
   content: "";
   position: absolute;
   bottom: 0;
-  width: 35%;
+  width: 45%;
   left: 50%;
   transform: translateX(-50%);
   background-color: hsl(0, 94%, 66%);
@@ -53,24 +94,34 @@ p, .tab-link {
   color: hsl(229, 31%, 21%);
 }
 
-.is-open #nav-menu {
-  display: none;
-}
-
-.is-open #close-menu {
-  display: block;
-}
-
-.is-open #hamburger-menu {
-  display: none;
-}
-
-.is-open #menu {
-  display: block;
+.btn-style:hover {
+  cursor: pointer;
+  color: hsl(231, 69%, 60%);
+  background-color: white;
 }
 
 @media (min-width: 768px) {
   .tab-link:hover::after {
-    width: 100%;
+    width: 60%;
+  }
+  #menu-wrapper a:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  #menu-wrapper #login {
+    border: none;
+    outline: 1px solid hsl(0, 94%, 66%);
+    background-color: hsl(0, 94%, 66%);
+  }
+  #menu-wrapper #login:hover {
+    background-color: white;
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  .collapsed[aria-expanded=true] {
+    color: hsl(0, 94%, 66%);
+  }
+  .collapsed:hover {
+    color: hsl(0, 94%, 66%);
   }
 }/*# sourceMappingURL=sytle.css.map */
