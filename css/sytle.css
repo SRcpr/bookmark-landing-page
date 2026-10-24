@@ -1,3 +1,7 @@
+h1, h2, h3 {
+  color: hsl(229, 31%, 21%);
+}
+
 body {
   font-size: 18px;
   font-family: "Rubik", sans-serif;
@@ -6,28 +10,102 @@ body {
   font-weight: 400;
 }
 
-.nav-dark {
-  background-color: hsl(229, 31%, 21%);
-  color: hsl(0, 0%, 97%);
+button {
+  background-color: red;
 }
 
-.bg-login {
-  background-color: hsl(0, 94%, 66%);
-}
-
-p, .tab-link {
+.text-color {
   color: hsl(229, 31%, 21%);
   opacity: 0.5;
+}
+
+.drawer {
+  background-color: hsl(229, 31%, 21%);
+}
+.drawer a, .drawer button {
+  color: white;
 }
 
 .btn-primary {
   color: white;
   background-color: hsl(231, 69%, 60%);
+  outline: 2px solid hsl(231, 69%, 60%);
+  cursor: pointer;
+}
+.btn-primary:hover {
+  color: hsl(231, 69%, 60%);
+  background-color: white;
 }
 
 .btn-secondary {
-  background-color: hsl(0, 0%, 97%);
   color: hsl(229, 31%, 21%);
+  opacity: 0.8;
+  background-color: hsl(0, 0%, 97%);
+  outline: 2px solid hsl(0, 0%, 97%);
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: white;
+  color: hsl(229, 31%, 21%);
+  outline: 2px solid hsl(229, 31%, 21%);
+}
+
+.collapsed {
+  color: hsl(229, 31%, 21%);
+}
+.collapsed[aria-expanded=true] img {
+  transform: rotate(180deg);
+}
+.collapsed:hover {
+  cursor: pointer;
+}
+
+.custom-border {
+  border-color: hsl(0, 0%, 97%);
+}
+
+.nav-dark {
+  background-color: hsl(229, 31%, 21%);
+}
+
+footer h1, footer h2, footer h3, footer p, footer a {
+  color: white;
+}
+footer #footer-page {
+  background-color: hsl(231, 69%, 60%);
+}
+footer #footer-page #email::placeholder {
+  color: hsl(231, 69%, 60%);
+  opacity: 0.5;
+}
+footer #footer-page .error {
+  background-color: hsl(0, 94%, 66%);
+}
+footer #footer-page #email {
+  color: hsl(229, 31%, 21%);
+  font-weight: 500;
+  outline: none;
+}
+footer #footer-page .bg-login {
+  background-color: hsl(0, 94%, 66%);
+}
+footer #footer-page .bg-login:hover {
+  outline: 2px solid hsl(0, 94%, 66%);
+  background-color: white;
+  color: hsl(0, 94%, 66%);
+  cursor: pointer;
+}
+footer #footer-nav {
+  background-color: hsl(229, 31%, 21%);
+}
+
+.white {
+  color: hsl(0, 0%, 97%);
+}
+
+.custom-text, .tab-link {
+  color: hsl(229, 31%, 21%);
+  opacity: 0.5;
 }
 
 .customtext-gray {
@@ -38,11 +116,16 @@ p, .tab-link {
   position: relative;
 }
 
-.tab-link:hover::after {
+.tab-link:hover {
+  cursor: pointer;
+  color: hsl(0, 94%, 66%);
+}
+
+.tab-link.active::after {
   content: "";
   position: absolute;
   bottom: 0;
-  width: 35%;
+  width: 45%;
   left: 50%;
   transform: translateX(-50%);
   background-color: hsl(0, 94%, 66%);
@@ -53,24 +136,38 @@ p, .tab-link {
   color: hsl(229, 31%, 21%);
 }
 
-.is-open #nav-menu {
-  display: none;
-}
-
-.is-open #close-menu {
-  display: block;
-}
-
-.is-open #hamburger-menu {
-  display: none;
-}
-
-.is-open #menu {
-  display: block;
+.btn-style:hover {
+  cursor: pointer;
+  color: hsl(231, 69%, 60%);
+  background-color: white;
 }
 
 @media (min-width: 768px) {
   .tab-link:hover::after {
-    width: 100%;
+    width: 60%;
+  }
+  #menu-wrapper a:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  #menu-wrapper #login {
+    border: none;
+    outline: 1px solid hsl(0, 94%, 66%);
+    background-color: hsl(0, 94%, 66%);
+  }
+  #menu-wrapper #login:hover {
+    background-color: white;
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  .collapsed[aria-expanded=true] {
+    color: hsl(0, 94%, 66%);
+  }
+  .collapsed:hover {
+    color: hsl(0, 94%, 66%);
+  }
+  #footer-nav a:hover {
+    color: hsl(0, 94%, 66%);
+    cursor: pointer;
   }
 }/*# sourceMappingURL=sytle.css.map */

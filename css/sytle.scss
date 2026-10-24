@@ -8,9 +8,13 @@ $red-400: hsl(0, 94%, 66%);
 $grey-50: hsl(0, 0%, 97%);
 $blue-950: hsl(229, 31%, 21%);
 
-// h1=3xl h2=2xl h3=xl p=text-lg 
-// gap=4 section gap=12//10
-// button px-3 py-2
+    // mobile tab
+// h1  3xl     4xl      
+// h2  2xl     3xl      
+// h3   xl     2xl      
+h1,h2,h3{
+    color: $blue-950;
+}
 body{
     font-size: 18px;
     font-family: "Rubik", sans-serif;
@@ -18,39 +22,132 @@ body{
     font-style: normal;
     font-weight: 400; //400 500
 }
-.nav-dark{
-    background-color: $blue-950;
-    color: $grey-50;
+button{
+    background-color: red;
 }
-.bg-login{
-    background-color: $red-400;
-}
-// #hero,#feature,#extension{
-//     border: 2px solid blue;
-// }
-p,.tab-link{
+.text-color{
     color:$blue-950;
     opacity: 0.5;
+}
+.drawer{
+    background-color: $blue-950;
+    a,button{
+        color: white;
+    }
 }
 .btn-primary{
     color: white;
     background-color: $blue-600;
+    outline: 2px solid $blue-600;
+    cursor: pointer;
+    &:hover{
+        color: $blue-600;
+        background-color: white;
+    }
 }
 .btn-secondary{
-    background-color: $grey-50;
     color: $blue-950;
+    opacity: 0.8;
+    background-color: $grey-50;
+    outline: 2px solid $grey-50;
+    cursor: pointer;
+    &:hover{
+        background-color: white;
+        color: $blue-950;
+        outline: 2px solid $blue-950;
+    }
 }
+
+.collapsed{
+    color: $blue-950;   
+    &[aria-expanded='true']{
+        img{
+            transform: rotate(180deg);
+        }
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+.custom-border{
+   border-color: $grey-50;
+}
+// #image-setting::after{
+//     content: "";
+//     position: absolute;
+//     background-color: red;
+//     bottom: 0;
+//     width: 40%;
+//     height: 70%;
+//     right: 0;
+//     z-index: -10;
+//     border-bottom-left-radius: 30%;
+
+// }
+.nav-dark{
+    background-color: $blue-950;
+    
+}
+footer{
+    h1,h2,h3,p,a{
+        color: white;
+    }
+    #footer-page{
+        background-color: $blue-600;
+        #email::placeholder{
+            color: $blue-600;
+            opacity: 0.5;
+        }
+        .error{
+            background-color: $red-400;
+        }
+        #email{
+            color: $blue-950;
+            font-weight: 500;
+            outline: none;
+        }
+        .bg-login{
+            background-color: $red-400;
+            &:hover{
+                outline: 2px solid $red-400;
+                background-color: white;
+                color: $red-400;
+                cursor: pointer;
+            }
+         }
+    }
+    #footer-nav{
+        background-color: $blue-950;
+    }
+    
+}
+.white{
+    color: $grey-50;
+    
+}
+
+
+.custom-text,.tab-link{
+    color:$blue-950;
+    opacity: 0.5;
+}
+
 .customtext-gray{
     color: $grey-50;
 }
 .tab-item{
     position: relative;
 }
-.tab-link:hover::after{
+.tab-link:hover{
+    cursor: pointer;
+    color: $red-400;
+    
+}
+.tab-link.active::after{
     content: "";
     position: absolute;
     bottom: 0;
-    width: 35%;
+    width: 45%;
     left: 50%;
     transform: translateX(-50%);
     background-color: $red-400;
@@ -59,22 +156,51 @@ p,.tab-link{
 .tab-link.active{
     color: $blue-950;
 }
-.is-open #nav-menu{
-    display: none;
+.btn-style:hover{
+    cursor: pointer;
+    color: $blue-600;
+    background-color: white;
 }
-.is-open #close-menu{
-    display: block;
-}
-.is-open #hamburger-menu{
-    display: none;
-}
-.is-open #menu{
-    display: block;
-    
-}
+
+
 @media(min-width:768px){
+    
     .tab-link:hover::after{
-        width:100%;
+        width:60%;
         
-    }   
+    }
+    #menu-wrapper{
+        a:hover{
+            cursor: pointer;
+            color: $red-400;
+        }
+        #login{
+            border: none;
+            outline: 1px solid $red-400;
+            background-color: $red-400;
+            &:hover{
+                background-color: white;
+                cursor: pointer;
+                color:$red-400
+            }
+        }
+
+    } 
+    .collapsed{
+    
+        &[aria-expanded='true']{
+            color: $red-400;
+            
+        }
+        &:hover{
+            color: $red-400;
+        }
+}
+    #footer-nav{
+        a:hover{
+            color: $red-400;
+            cursor: pointer;
+        }
+    }
+
 }
