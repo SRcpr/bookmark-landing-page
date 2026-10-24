@@ -25,9 +25,9 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body class="flex flex-col gap-20">
-    <header class="">
+    <header class="w-full px-[32px] mx-auto lg:max-w-[1110px]">
       <nav
-        class="flex justify-between md:justify-start items-center py-4 md:p-0 border relative"
+        class="flex justify-between md:justify-start items-center py-4 md:p-0 relative"
       >
         <a href="#">
           <img src="./images/logo-bookmark.svg" alt="brand logo" />
@@ -36,24 +36,29 @@
           type="button"
           aria-label="hamburger menu"
           id="hamburger-menu"
-          class="md:hidden"
+          class="md:hidden hover:cursor-pointer"
         >
           <img src="./images/icon-hamburger.svg" alt="" aria-hidden="true" />
         </button>
         <div
-          class="hidden md:flex md:justify-end flex-1 fixed overflow-y-auto h-full inset-x-0 inset-y-0 z-50 md:static"
+          class="hidden md:flex md:justify-end flex-1 fixed overflow-y-auto h-full inset-x-0 inset-y-0 z-50 md:static px-[32px]"
           id="menu-wrapper"
         >
           <section class="flex justify-between py-4 md:hidden">
             <a href="#">
               <img src="./images/logo-bookmark.svg" alt="brand logo" />
             </a>
-            <button type="button" aria-label="close menu" id="close-menu">
+            <button
+              type="button"
+              aria-label="close menu"
+              id="close-menu"
+              class="hover:cursor-pointer"
+            >
               <img src="./images/icon-close.svg" alt="" aria-hidden="true" />
             </button>
           </section>
           <ul
-            class="flex flex-col md:text-sm md:flex-row md:items-center md:gap-10 text-center uppercase"
+            class="flex flex-col md:text-sm md:flex-row md:items-center md:gap-10 text-center md:px-1 uppercase"
           >
             <li class="border-t py-4 md:border-none">
               <a href="#">Features</a>
@@ -68,7 +73,7 @@
               <button
                 id="login"
                 type="button"
-                class="uppercase font-medium md:py-1 md:px-4 w-full border rounded-md"
+                class="uppercase font-medium py-2 md:px-4 w-full border rounded-md"
               >
                 Login
               </button>
@@ -76,7 +81,7 @@
           </ul>
           <section
             id="social-links"
-            class="flex gap-10 justify-center items-center py-4 md:hidden"
+            class="flex gap-10 justify-center items-center py-4 md:hidden absolute bottom-0 left-1/2 -translate-x-1/2"
           >
             <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
             <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
@@ -84,7 +89,9 @@
         </div>
       </nav>
     </header>
-    <main class="flex flex-col gap-20">
+    <main
+      class="flex flex-col gap-20 w-full px-[32px] mx-auto lg:max-w-[1110px]"
+    >
       <section
         class="flex flex-col-reverse text-center md:gap-10 md:flex-row md:text-start md:justify-between"
         id="hero"
@@ -101,13 +108,13 @@
           <div class="flex justify-center gap-4 md:justify-start">
             <button
               type="button"
-              class="btn-primary py-2 px-4 font-medium rounded-md"
+              class="btn-primary text-base py-2 px-4 font-medium rounded-md"
             >
               Get it on Chrome
             </button>
             <button
               type="button"
-              class="btn-secondary py-2 px-4 font-medium rounded-md"
+              class="btn-secondary text-base py-2 px-4 font-medium rounded-md"
             >
               Get it on Firefox
             </button>
@@ -131,24 +138,20 @@
         </p>
         <ul
           id="tab-list"
-          class="text-center flex flex-col md:flex-row md:justify-between md:gap-10 md:w-[70%] md:mx-auto"
+          class="text-center md:border-b flex flex-col md:flex-row md:justify-between md:gap-10 md:w-[70%] md:mx-auto"
         >
-          <li
-            class="border-t py-4 md:border-t-0 md:border-b md:w-full relative"
-          >
-            <a class="tab-link" href="#simple-bookmarking"
+          <li class="border-t py-4 md:border-0 md:w-full relative">
+            <a class="tab-link text-base" href="#simple-bookmarking"
               >Simple Bookmarking</a
             >
           </li>
-          <li
-            class="border-t py-4 md:border-t-0 md:border-b md:w-full relative"
-          >
-            <a class="tab-link" href="#speedy-searching">Speedy Searching</a>
+          <li class="border-t py-4 md:border-0 md:w-full relative">
+            <a class="tab-link text-base" href="#speedy-searching"
+              >Speedy Searching</a
+            >
           </li>
-          <li
-            class="border-t border-b py-4 md:border-t-0 md:border-b md:w-full relative"
-          >
-            <a class="tab-link" href="#easy-sharing">Easy Sharing</a>
+          <li class="border-t border-b py-4 md:border-0 md:w-full relative">
+            <a class="tab-link text-base" href="#easy-sharing">Easy Sharing</a>
           </li>
         </ul>
         <!-- tab simple-bookmarking  -->
@@ -413,70 +416,77 @@
       </section>
     </main>
     <footer class="text-center" id="footer">
-      <section class="py-10 flex flex-col gap-8" id="footer-page">
-        <p class="text-lg uppercase">35,000 + Aleady joined</p>
-        <h2
-          class="text-2xl font-medium md:text-3xl md:mx-auto md:w-[40%] lg:w-[35%] xl:w-[32%]"
-        >
-          Stay up-to-date with what we're doing
-        </h2>
+      <div class="" id="footer-page">
+        <section class="py-10 flex flex-col gap-8 mx-auto lg:max-w-[1110px]">
+          <p class="text-lg uppercase">35,000 + Aleady joined</p>
+          <h2
+            class="text-2xl font-medium md:text-3xl md:mx-auto md:w-[40%] lg:w-[35%] xl:w-[32%]"
+          >
+            Stay up-to-date with what we're doing
+          </h2>
 
-        <form
-          class="flex flex-col gap-4 md:flex-row md:mx-auto md:w-[40%] lg:w-[35%] xl:w-[32%]"
-        >
-          <div class="flex-1 rounded-md error" id="inputSetError">
-            <div class="relative">
-              <label class="sr-only" for="email">Enter your email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="bg-white text-sm px-4 py-2 w-full rounded-md"
-                placeholder="Enter your email address"
-              />
-              <div
-                class="absolute inset-y-0 right-2 flex items-center invisible"
-                id="errorMark"
-              >
-                <img src="./images/icon-error.svg" alt="" />
+          <form
+            class="flex flex-col gap-4 md:flex-row md:mx-auto md:w-[40%] lg:w-[35%] xl:w-[32%]"
+          >
+            <div class="flex-1 rounded-md error" id="inputSetError">
+              <div class="relative">
+                <label class="sr-only" for="email">Enter your email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="bg-white text-sm px-4 py-2 w-full rounded-md"
+                  placeholder="Enter your email address"
+                />
+                <div
+                  class="absolute inset-y-0 right-2 flex items-center invisible"
+                  id="errorMark"
+                >
+                  <img src="./images/icon-error.svg" alt="" />
+                </div>
               </div>
+              <p class="hidden" text-color id="errorMsg">
+                Whoops, make sure it's an email
+              </p>
             </div>
-            <p class="hidden" text-color id="errorMsg">
-              Whoops, make sure it's an email
-            </p>
-          </div>
-          <div class="">
-            <button class="w-full px-4 py-1 rounded-md bg-login" type="submit">
-              contant us
-            </button>
-          </div>
-        </form>
-      </section>
-      <section id="footer-nav" class="py-10 md:py-4">
-        <nav class="flex flex-col items-center gap-8 md:flex-row">
-          <a href="#" class="md:w-[15%]"
-            ><img class="" src="./images/logo-bookmark.svg" alt="brand logo "
-          /></a>
+            <div class="">
+              <button
+                class="w-full px-4 py-1 rounded-md bg-login"
+                type="submit"
+              >
+                contant us
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div id="footer-nav">
+        <section class="py-10 md:py-4 mx-auto md:max-w-[1110px]">
+          <nav class="flex flex-col items-center gap-8 md:flex-row">
+            <a href="#" class="md:w-[15%]"
+              ><img class="" src="./images/logo-bookmark.svg" alt="brand logo "
+            /></a>
 
-          <ul class="flex flex-col md:flex-row gap-4 md:w-[70%]">
-            <li><a href="#" class="text-base">Features</a></li>
-            <li><a href="#" class="text-base">Pricing</a></li>
-            <li><a href="#" class="text-base">Contact</a></li>
-          </ul>
-          <ul class="flex md:flex-row gap-8 md:w-[15%] md:justify-end">
-            <li class="">
-              <a href="#"
-                ><img src="./images/icon-facebook.svg" alt="facebook"
-              /></a>
-            </li>
-            <li class="">
-              <a href="#"
-                ><img src="./images/icon-twitter.svg" alt="twitter"
-              /></a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+            <ul class="flex flex-col md:flex-row gap-4 md:w-[70%]">
+              <li><a href="#" class="text-base">Features</a></li>
+              <li><a href="#" class="text-base">Pricing</a></li>
+              <li><a href="#" class="text-base">Contact</a></li>
+            </ul>
+            <ul class="flex md:flex-row gap-8 md:w-[15%] md:justify-end">
+              <li class="">
+                <a href="#"
+                  ><img src="./images/icon-facebook.svg" alt="facebook"
+                /></a>
+              </li>
+              <li class="">
+                <a href="#"
+                  ><img src="./images/icon-twitter.svg" alt="twitter"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>

@@ -1,0 +1,5 @@
+Q1. 225px se 350px tak button ka text 2-3 line me ho ja raha hai aur faq me question  me yesa lag raha hai jaise text-center apply ho raha hai.
+Q2. faq section me question kisi ek toggle par click karte hai to
+    --expanded true ho raha lekin expanded false nahi ho raha hai.
+    --agar function hideall() apply karta hu to kisi koi ek question hi ek time me active ho raha hai lekin same question toggle nahi ho raha hai.
+Q3. sgv ko image jaisa use karne par uska color control nahi kar pa raha hu.

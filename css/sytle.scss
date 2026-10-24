@@ -22,9 +22,6 @@ body{
     font-style: normal;
     font-weight: 400; //400 500
 }
-button{
-    background-color: red;
-}
 .text-color{
     color:$blue-950;
     opacity: 0.5;
@@ -40,6 +37,7 @@ button{
     background-color: $blue-600;
     outline: 2px solid $blue-600;
     cursor: pointer;
+    transition: all 0.25s ease-in-out;
     &:hover{
         color: $blue-600;
         background-color: white;
@@ -108,6 +106,7 @@ footer{
         }
         .bg-login{
             background-color: $red-400;
+           transition: all 0.25s ease-in-out;
             &:hover{
                 outline: 2px solid $red-400;
                 background-color: white;
@@ -119,10 +118,6 @@ footer{
     #footer-nav{
         background-color: $blue-950;
     }
-    
-}
-.white{
-    color: $grey-50;
     
 }
 
@@ -187,7 +182,7 @@ footer{
 
     } 
     .collapsed{
-    
+    transition: all 0.25s ease-in-out;
         &[aria-expanded='true']{
             color: $red-400;
             

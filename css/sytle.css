@@ -10,10 +10,6 @@ body {
   font-weight: 400;
 }
 
-button {
-  background-color: red;
-}
-
 .text-color {
   color: hsl(229, 31%, 21%);
   opacity: 0.5;
@@ -31,6 +27,7 @@ button {
   background-color: hsl(231, 69%, 60%);
   outline: 2px solid hsl(231, 69%, 60%);
   cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }
 .btn-primary:hover {
   color: hsl(231, 69%, 60%);
@@ -88,6 +85,7 @@ footer #footer-page #email {
 }
 footer #footer-page .bg-login {
   background-color: hsl(0, 94%, 66%);
+  transition: all 0.25s ease-in-out;
 }
 footer #footer-page .bg-login:hover {
   outline: 2px solid hsl(0, 94%, 66%);
@@ -97,10 +95,6 @@ footer #footer-page .bg-login:hover {
 }
 footer #footer-nav {
   background-color: hsl(229, 31%, 21%);
-}
-
-.white {
-  color: hsl(0, 0%, 97%);
 }
 
 .custom-text, .tab-link {
@@ -159,6 +153,9 @@ footer #footer-nav {
     background-color: white;
     cursor: pointer;
     color: hsl(0, 94%, 66%);
+  }
+  .collapsed {
+    transition: all 0.25s ease-in-out;
   }
   .collapsed[aria-expanded=true] {
     color: hsl(0, 94%, 66%);

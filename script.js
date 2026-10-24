@@ -40,7 +40,7 @@ faqQuestions.forEach((faqQuestion) => {
   faqQuestion.addEventListener("click", () => {
     const targetId = faqQuestion.getAttribute("aria-controls");
     const targetSection = document.getElementById(targetId);
-    hideAlldd();
+    // hideAlldd();
     const isHidden = targetSection.classList.toggle("hidden");
     faqQuestion.setAttribute("aria-expanded", !isHidden);
   });
