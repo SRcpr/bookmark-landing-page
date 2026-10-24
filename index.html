@@ -93,7 +93,7 @@
           <h1 class="text-3xl font-medium lg:text-5xl">
             A Simple Bookmark Manager
           </h1>
-          <p class="text-lg">
+          <p class="text-lg text-color">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
@@ -122,7 +122,9 @@
         id="feature"
       >
         <h2 class="text-2xl font-medium md:mx-auto">Features</h2>
-        <p class="text-lg md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto">
+        <p
+          class="text-lg text-color md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto"
+        >
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
@@ -162,7 +164,7 @@
           </div>
           <div class="flex flex-col gap-10 w-full md:justify-center">
             <h2 class="text-2xl font-medium">Bookmark in one click</h2>
-            <p class="text-lg md:w-3/4">
+            <p class="text-lg text-color md:w-3/4">
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
               favourite sites.
@@ -182,11 +184,14 @@
           </div>
           <div class="flex flex-col gap-10 w-full md:justify-center">
             <h2 class="text-2xl font-medium">Intelligent search</h2>
-            <p class="text-lg md:w-3/4">
+            <p class="text-lg text-color md:w-3/4">
               Our powerful search feature will help you find saved sites in no
               time at all. No need to trawl through all of your bookmarks.
             </p>
-            <button class="btn-primary py-2 px-4 rounded-md" type="button">
+            <button
+              class="btn-primary py-2 px-4 w- rounded-md md:w-52"
+              type="button"
+            >
               More Info
             </button>
           </div>
@@ -205,11 +210,14 @@
           </div>
           <div class="flex flex-col gap-10 w-full md:justify-center">
             <h2 class="text-2xl font-medium">Share your bookmarks</h2>
-            <p class="text-lg md:w-3/4">
+            <p class="text-lg text-color md:w-3/4">
               Easily share your bookmarks and collections with others. Create a
               shareable link that you can send at the click of a button.
             </p>
-            <button class="btn-primary py-2 px-4 rounded-md" type="button">
+            <button
+              class="btn-primary py-2 px-4 rounded-md md:w-52"
+              type="button"
+            >
               More Info
             </button>
           </div>
@@ -220,7 +228,9 @@
         id="extension"
       >
         <h2 class="text-2xl text-center font-medium">Download the extension</h2>
-        <p class="text-lg md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto">
+        <p
+          class="text-lg text-color md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto"
+        >
           We’ve got more browsers in the pipeline. Please do let us know if
           you’ve got a favourite you’d like us to prioritize.
         </p>
@@ -239,7 +249,7 @@
             </div>
             <div class="flex flex-col items-center gap-4">
               <h3 class="text-xl font-medium">Add to Chrome</h3>
-              <p class="text-sm">Minimum version 62</p>
+              <p class="text-sm text-color">Minimum version 62</p>
               <div class="">
                 <img class="" src="./images/bg-dots.svg" alt="divider line" />
               </div>
@@ -258,7 +268,7 @@
             </div>
             <div class="flex flex-col items-center gap-4">
               <h3 class="text-xl font-medium">Add to Firefox</h3>
-              <p class="text-sm">Minimum version 55</p>
+              <p class="text-sm text-color">Minimum version 55</p>
               <div><img src="./images/bg-dots.svg" alt="divider line" /></div>
               <button class="btn-primary py-2 px-4 rounded-md btn-style">
                 Add & Install Extension
@@ -275,7 +285,7 @@
             </div>
             <div class="flex flex-col items-center gap-4">
               <h3 class="text-xl font-medium">Add to Oprea</h3>
-              <p class="text-sm">Minimum version 46</p>
+              <p class="text-sm text-color">Minimum version 46</p>
               <div><img src="./images/bg-dots.svg" alt="divider line" /></div>
               <button class="btn-primary py-2 px-4 rounded-md btn-style">
                 Add & Install Extension
@@ -288,14 +298,18 @@
         <h2 class="text-2xl font-medium md:text-center">
           Frequently Asked Questions
         </h2>
-        <p class="text-lg md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto">
+        <p
+          class="text-lg text-color md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto"
+        >
           Here are some of our FAQs. If you have any other questions you’d like
           answered please feel free to email us.
         </p>
         <dl
           class="flex flex-col gap-4 md:w-[65%] lg:w-[52%] xl:w-[37%] md:mx-auto"
         >
-          <div class="text-start border-b py-4 md:border-b-0 md:border-t">
+          <div
+            class="text-start border-b py-4 md:border-b-0 md:border-t custom-border"
+          >
             <dt class="">
               <button
                 aria-controls="faq-answer-1"
@@ -312,12 +326,16 @@
               </button>
             </dt>
             <dd class="hidden mt-4" id="faq-answer-1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
-              quis quam ornare mattis.
+              <p class="text-color">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                tincidunt justo eget ultricies fringilla. Phasellus blandit
+                ipsum quis quam ornare mattis.
+              </p>
             </dd>
           </div>
-          <div class="text-start border-b py-4 md:border-b-0 md:border-t">
+          <div
+            class="text-start border-b py-4 md:border-b-0 md:border-t custom-border"
+          >
             <dt>
               <button
                 aria-controls="faq-answer-2"
@@ -330,15 +348,19 @@
               </button>
             </dt>
             <dd class="hidden mt-4" id="faq-answer-2">
-              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
-              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
-              eros aliquet convallis ultricies. Mauris augue massa, ultricies
-              non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
-              convallis ultricies. Mauris augue massa, ultricies non ligula.
-              Suspendisse imperdiet.
+              <p class="text-color">
+                Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                luctus eros aliquet convallis ultricies. Mauris augue massa,
+                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros
+                aliquet convallis ultricies. Mauris augue massa, ultricies non
+                ligula. Suspendisse imperdiet.
+              </p>
             </dd>
           </div>
-          <div class="text-start border-b py-4 md:border-b-0 md:border-t">
+          <div
+            class="text-start border-b py-4 md:border-b-0 md:border-t custom-border"
+          >
             <dt>
               <button
                 aria-controls="faq-answer-3"
@@ -351,13 +373,15 @@
               </button>
             </dt>
             <dd class="hidden mt-4" id="faq-answer-3">
-              Sed consectetur quam id neque fermentum accumsan. Praesent luctus
-              vestibulum dolor, ut condimentum urna vulputate eget. Cras in
-              ligula quis est pharetra mattis sit amet pharetra purus. Sed
-              sollicitudin ex et ultricies bibendum.
+              <p class="text-color">
+                Sed consectetur quam id neque fermentum accumsan. Praesent
+                luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                Cras in ligula quis est pharetra mattis sit amet pharetra purus.
+                Sed sollicitudin ex et ultricies bibendum.
+              </p>
             </dd>
           </div>
-          <div class="text-start border-b py-4 md:border-t">
+          <div class="text-start border-b py-4 md:border-t custom-border">
             <dt>
               <button
                 aria-controls="faq-answer-4"
@@ -370,11 +394,13 @@
               </button>
             </dt>
             <dd class="hidden mt-4" id="faq-answer-4">
-              Integer condimentum ipsum id imperdiet finibus. Vivamus in
-              placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
-              pellentesque non ut velit. More Info 35,000+ already joined Stay
-              up-to-date with what we’re doing Contact Us Features Pricing
-              Contact
+              <p class="text-color">
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                gravida pellentesque non ut velit. More Info 35,000+ already
+                joined Stay up-to-date with what we’re doing Contact Us Features
+                Pricing Contact
+              </p>
             </dd>
           </div>
         </dl>
@@ -386,7 +412,7 @@
         </button>
       </section>
     </main>
-    <footer class="text-center text-white" id="footer">
+    <footer class="text-center" id="footer">
       <section class="py-10 flex flex-col gap-8" id="footer-page">
         <p class="text-lg uppercase">35,000 + Aleady joined</p>
         <h2
@@ -398,14 +424,14 @@
         <form
           class="flex flex-col gap-4 md:flex-row md:mx-auto md:w-[40%] lg:w-[35%] xl:w-[32%]"
         >
-          <div class="bg-login flex-1 rounded-md" id="inputSetError">
+          <div class="flex-1 rounded-md error" id="inputSetError">
             <div class="relative">
               <label class="sr-only" for="email">Enter your email</label>
               <input
                 type="email"
                 name="email"
                 id="email"
-                class="bg-white px-4 py-2 w-full text-red-500 rounded-md"
+                class="bg-white text-sm px-4 py-2 w-full rounded-md"
                 placeholder="Enter your email address"
               />
               <div
@@ -415,10 +441,12 @@
                 <img src="./images/icon-error.svg" alt="" />
               </div>
             </div>
-            <p class="hidden" id="errorMsg">Whoops, make sure it's an email</p>
+            <p class="hidden" text-color id="errorMsg">
+              Whoops, make sure it's an email
+            </p>
           </div>
           <div class="">
-            <button class="w-full px-4 py-2 bg-login rounded-md" type="submit">
+            <button class="w-full px-4 py-1 rounded-md bg-login" type="submit">
               contant us
             </button>
           </div>
@@ -431,10 +459,9 @@
           /></a>
 
           <ul class="flex flex-col md:flex-row gap-4 md:w-[70%]">
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><button type="button">Login</button></li>
+            <li><a href="#" class="text-base">Features</a></li>
+            <li><a href="#" class="text-base">Pricing</a></li>
+            <li><a href="#" class="text-base">Contact</a></li>
           </ul>
           <ul class="flex md:flex-row gap-8 md:w-[15%] md:justify-end">
             <li class="">

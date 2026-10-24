@@ -12,13 +12,22 @@ $blue-950: hsl(229, 31%, 21%);
 // h1  3xl     4xl      
 // h2  2xl     3xl      
 // h3   xl     2xl      
-
+h1,h2,h3{
+    color: $blue-950;
+}
 body{
     font-size: 18px;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 400; //400 500
+}
+button{
+    background-color: red;
+}
+.text-color{
+    color:$blue-950;
+    opacity: 0.5;
 }
 .drawer{
     background-color: $blue-950;
@@ -29,29 +38,28 @@ body{
 .btn-primary{
     color: white;
     background-color: $blue-600;
-    outline: 1px solid $blue-600;
+    outline: 2px solid $blue-600;
+    cursor: pointer;
+    &:hover{
+        color: $blue-600;
+        background-color: white;
+    }
 }
 .btn-secondary{
-    background-color: $grey-50;
     color: $blue-950;
-    outline: 1px solid $blue-950;
-}
-#hero{
-    button{
-        cursor: pointer;
-        &:first-child:hover{
-            color: $blue-600;
-            background-color: white;
-        }
-        &:last-child:hover{
-            color:$grey-50;
-            background-color: white;
-        }
+    opacity: 0.8;
+    background-color: $grey-50;
+    outline: 2px solid $grey-50;
+    cursor: pointer;
+    &:hover{
+        background-color: white;
+        color: $blue-950;
+        outline: 2px solid $blue-950;
     }
-
 }
+
 .collapsed{
-    
+    color: $blue-950;   
     &[aria-expanded='true']{
         img{
             transform: rotate(180deg);
@@ -60,6 +68,9 @@ body{
     &:hover{
         cursor: pointer;
     }
+}
+.custom-border{
+   border-color: $grey-50;
 }
 // #image-setting::after{
 //     content: "";
@@ -78,14 +89,31 @@ body{
     
 }
 footer{
+    h1,h2,h3,p,a{
+        color: white;
+    }
     #footer-page{
         background-color: $blue-600;
         #email::placeholder{
             color: $blue-600;
             opacity: 0.5;
         }
+        .error{
+            background-color: $red-400;
+        }
+        #email{
+            color: $blue-950;
+            font-weight: 500;
+            outline: none;
+        }
         .bg-login{
             background-color: $red-400;
+            &:hover{
+                outline: 2px solid $red-400;
+                background-color: white;
+                color: $red-400;
+                cursor: pointer;
+            }
          }
     }
     #footer-nav{
@@ -110,7 +138,12 @@ footer{
 .tab-item{
     position: relative;
 }
-.tab-link:hover::after{
+.tab-link:hover{
+    cursor: pointer;
+    color: $red-400;
+    
+}
+.tab-link.active::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -128,6 +161,7 @@ footer{
     color: $blue-600;
     background-color: white;
 }
+
 
 @media(min-width:768px){
     
@@ -162,5 +196,11 @@ footer{
             color: $red-400;
         }
 }
+    #footer-nav{
+        a:hover{
+            color: $red-400;
+            cursor: pointer;
+        }
+    }
 
 }
